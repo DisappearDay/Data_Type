@@ -146,3 +146,34 @@ int main() {
 
 	return 0;
 }
+struct R
+{
+	int a;
+	char c;
+	double b;
+};
+
+void init(struct R* str) {
+	str->a = 100;
+	str->b = 1.2;
+	str->c = 'a';
+}
+
+void print1(struct R tmp) {
+	printf("%d\n%c\n%lf\n",tmp.a,tmp.c,tmp.b);
+}
+void print2(const struct R* p) {
+	printf("%d\n%lf\n%c\n", p->a, p->b, p->c);
+}
+
+int main() {
+	struct R r={0};
+	init(&r);
+	print1(r);
+	print2(&r);
+	/*r.a=100;
+	r.b=1.2;
+	r.c='a';*/
+	printf("%d\n", r.a);
+	return 0;
+}
