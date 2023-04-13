@@ -81,3 +81,68 @@ int main() {
 	printf("%d\n",sizeof(r2));
 	return 0;
 }
+struct Stu1 {
+	char name;
+	int age;
+	char tele;
+};
+struct Stu2 {
+	char name;
+	char tele;
+	int age;
+};
+struct Stu3 {
+	double name;
+	char tele;
+	int age;
+};
+struct Stu4 {
+	char a;
+	struct Stu3 s3;
+	double b;
+};
+//int main() {
+//	struct Stu1 s1 = { 0 };
+//	struct Stu2 s2 = { 0 };
+//	struct Stu3 s3 = { 0 };
+//	struct Stu4 s4 = { 0 };
+//
+//	printf("%d\n", sizeof(s1));//12
+//	printf("%d\n", sizeof(s2));//8
+//	printf("%d\n", sizeof(s3));//16
+//	printf("%d\n", sizeof(s4));//32
+//
+//	return 0;
+//}
+// 
+// 
+// 
+//#pragma pack(4)//设置默认对齐数为4
+//struct S
+//{
+//	char c1;
+//	double d;
+//};
+//#pragma pack()//取消设置默认对齐数
+//
+//int main() {
+//	struct S s;
+//	printf("%d\n", sizeof(s));
+//	return 0;
+//}
+
+struct S {
+	char name;
+	int age;
+	double d;
+};
+#include<stddef.h>
+int main() {
+
+	//offsetof();
+	printf("%d\n", offsetof(struct S, name));
+	printf("%d\n", offsetof(struct S, age));
+	printf("%d\n", offsetof(struct S, d));
+
+	return 0;
+}
