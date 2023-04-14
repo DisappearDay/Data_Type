@@ -177,3 +177,33 @@ int main() {
 	printf("%d\n", r.a);
 	return 0;
 }
+
+struct Q {
+	int a : 2;//数字是bit位，指的是a占用两个bit位  一个字节8个bit位
+	int b : 5;
+	int c : 10;
+	int d : 30;
+};
+
+struct W {
+	char a : 3;
+	char b : 4;
+	char c : 5;
+	char d : 4;
+};
+
+
+int main() {
+
+	//struct Q s;
+	//printf("%d\n",sizeof(s));
+
+	struct W w={0};
+	w.a = 10;
+	w.b = 20;
+	w.c = 3;
+	w.d = 4;
+	printf("%d,%d,%d,%d", w.a, w.b, w.c, w.d);
+
+	return 0;
+}
