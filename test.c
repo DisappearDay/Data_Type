@@ -207,3 +207,17 @@ int main() {
 
 	return 0;
 }
+enum Sex {  //是一种类型
+	//枚举的可能取值---常量
+	male=2,//male=2是给它赋一个初始值   默认的初始值是0
+    female,//当male=2时，female就是3
+	secret//4
+};
+
+
+int main() {
+
+	enum Sex s = male;//只能取枚举内定义的值
+	printf("%d %d %d",male,female,secret);
+	return 0;
+}
