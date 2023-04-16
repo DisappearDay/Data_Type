@@ -221,3 +221,61 @@ int main() {
 	printf("%d %d %d",male,female,secret);
 	return 0;
 }
+union un {
+	int a;
+	char b;
+};
+
+//int check_sys() {
+//	int a = 1;
+//	return *(char*)&a;
+//}
+
+int check_sys() {
+	union U {
+		char c;
+		int i;
+	}u;
+	u.i = 1;
+	return u.c;
+}
+
+//int main() {
+//	union un u;
+//
+//	printf("%x\n", &u.a);
+//	printf("%x\n", &u.b);
+//	printf("%x\n", &u);
+//
+//
+//	//u.a = 0x11223344;
+//	//u.b = 0x55;
+//	//printf("%x\n",u.a);
+//
+//
+//
+//	int ret = check_sys();
+//	if (1 == ret) {
+//		printf("xiaoduan");
+//	}
+//	else {
+//		printf("daduan");
+//	}
+//
+//	return 0;
+//}
+
+
+
+union Un {
+	int a;
+	char arr[5];
+};
+
+int main() {
+	union Un u;
+	printf("%d\n",sizeof(u));
+
+
+	return 0;
+}
